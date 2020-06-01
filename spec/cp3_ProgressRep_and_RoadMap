@@ -1,0 +1,14 @@
+Checkpoint 3 Report:
+	Our pipeline has full forwarding, and has stall logic implemented to avoid hazards. We have
+a paramaterized 2 way cache implemented and linked to the cache hierarchy and CPU. We also have
+a working paramaterized 4 way pseudo LRU cache implemented that can be hooked up to our system 
+at any time. Our Clock rate remains around 108 MHz as we did not get the time to optimize our
+longest data path but we have plans to pipline and simplify the arbiter. We didn't have time to 
+design alot of our advanced features nor Branch Prediction but have begun brainstorming.
+
+Checkpoint 3 Roadmap:
+	-Branch Prediction, which includes alot of our advanced design features
+		4-Way BTB
+		Local Branch Table
+	-Victim Cache
+	-Optimizations for Clock Rate

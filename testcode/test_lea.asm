@@ -1,0 +1,20 @@
+ORIGIN 4x0000
+
+SEGMENT CodeSegment:
+	LEA	R0, VALUE1
+	; R0 should contain the value 4x0012
+
+ENDLOOP:
+	BRnzp	ENDLOOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+
+SEGMENT
+DATA:
+VALUE1:	DATA2	4x0000
+

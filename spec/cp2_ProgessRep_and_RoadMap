@@ -1,0 +1,17 @@
+Checkpoint 2 Report:
+    Our pipline build can now handle all instructions, has  stall logic for
+memory functions, has the 2 L1 caches implemented and a cache arbiter linked
+up to physical memory. We clock in at around 108 MHz but are looking to
+optimize. We have the design for are forwarding logic and have documented the
+actual logic in a document on our project google drive. We also have all the
+stall logic in a file on the google drive also. We have also designed and builtan
+expanded 2-way L2 cache that we are currently testing. We have also trimmed
+our git branches to a more manageable size.
+
+Checkpoint 2 Roadmap:
+    -Full integration of 4-way L2 Cache
+    -Forwarding fully implemented
+    -Clock Rate optimization
+    -Hazard Protection
+    -Design(Implementation?) Branch Prediction
+    -Designs for advance features

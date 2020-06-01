@@ -1,0 +1,24 @@
+Checkpoint 1 Progress Report:
+    Our initial pipeline build can now handle ADD, AND, NOT, LDR, STR and BR
+instructions. We have initial designs of the pieces of our cache hierarchy but
+we have many adjustments in mind. These adjustments include, setting up the
+I-cache to be Read-Only and expanding the L2 Cache. We have also begun to plan
+about how to adjust the datapath to account for the non perfect memory, hazards
+and the remaining instructions. We are clocking around 157 MHz so speed is not
+really an issue as of now. Any information in relation to contents of the pipe-
+line registers or signal definitions is well defined in a project Google Drive.
+
+Checkpoint 1 Road Map:
+    We originally anticipated only doing the bear minimum for caches but looking
+at the schedules we have decided we are going to take a more aggressive time-
+line for the cache development as alot of our advanced design points come from
+the cache and we won't want to do things regressively. Below is a general over-
+view of our plan for the next checkpoint:
+
+    -2-way set associative L1 I-Cache and L1 D-Cache
+    -4-way 2-cycle set associative L2 Cache (with pseudo LRU)
+    -Cache Arbiter
+    -Proper Integration into Datapath
+    -Design for Hazard Protection and Forwarding
+    -Clean up Git repository (trimming branches and such)
+    -Clean up code base (removing any unnecessary module files)

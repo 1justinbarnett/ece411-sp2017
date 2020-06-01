@@ -1,0 +1,44 @@
+ORIGIN 4x0000
+
+SEGMENT CodeSegment:
+	LEA	R1, VALUE
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	LDR	R2, R1, 0
+	LEA	R1, LOC
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	
+	STB	R2, R1, 0
+	LDR	R3, R1, 0
+	; R3 should contain 4x0034
+
+	STB	R2, R1, 1
+	LDR	R4, R1, 0
+	; R4 should contain 4x3434
+
+ENDLOOP:
+	BRnzp	ENDLOOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+
+SEGMENT
+DATA:
+VALUE:	DATA2	4x1234
+LOC:	DATA2	4x0000
+

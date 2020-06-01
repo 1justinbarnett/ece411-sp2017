@@ -1,0 +1,59 @@
+ORIGIN 4x0000
+
+SEGMENT CodeSegment:
+	AND	R0, R0, 0
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	JSR	ADD1
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+
+	LEA	R1, ADD1
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	JSRR	R1
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+
+ENDLOOP:
+	; if R0 is not 2 at this point, JSR and/or JSRR do not work
+	BRnzp	ENDLOOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+
+ADD1:
+	ADD	R0, R0, 1
+	RET
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+

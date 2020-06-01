@@ -1,0 +1,45 @@
+ORIGIN 4x0000
+
+SEGMENT CodeSegment:
+	AND	R0, R0, 0
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	TRAP	ADD1_TRAP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	; R0 should contain 1
+
+ENDLOOP:
+	BRnzp	ENDLOOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+
+ADD1_TRAP:
+	DATA2	ADD1
+
+ADD1:
+	ADD	R0, R0, 1
+	RET
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+

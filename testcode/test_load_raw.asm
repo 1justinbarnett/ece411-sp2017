@@ -1,0 +1,36 @@
+Origin 4x0000
+
+SEGMENT  CodeSegment:
+	LEA	R0, VALUE
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	
+	LDR	R1, R0, 0
+	ADD	R2, R1, 2
+
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+
+HALT:
+   BRnzp HALT
+   NOP
+   NOP
+   NOP
+   NOP
+   NOP
+   NOP
+   NOP
+
+SEGMENT Data:
+VALUE:	DATA2	4x600D
+
